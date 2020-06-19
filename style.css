@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+  --darkblue: hsl(234, 12%, 34%);
+  --grayishblue: hsl(229, 6%, 66%);
+  --lightgray: hsl(0, 0%, 98%);
+  --lowWeight: 200;
+  --mediumWeight: 400;
+  --highWeight: 600;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  text-align: center;
+  margin: auto 30px;
+}
+
+.head {
+  margin: 80px 0px;
+}
+
+.head__objective {
+  font-weight: var(--lowWeight);
+  font-size: 1.7em;
+}
+
+.head__power {
+  font-weight: var(--highWeight);
+  font-size: 1.7em;
+  margin-bottom: 10px;
+}
+
+.four-card-container__card {
+  text-align: left;
+  padding: 30px 24px;
+  margin-bottom: 34px;
+  border-radius: 5px;
+}
+
+.four-card-container__one {
+  box-shadow: 0px 18px 22px -3px var(--grayishblue), 0px -5px var(--cyan);
+}
+
+.four-card-container__two {
+  box-shadow: 0px 18px 22px -3px var(--grayishblue), 0px -5px var(--red);
+}
+
+.four-card-container__three {
+  box-shadow: 0px 18px 22px -3px var(--grayishblue), 0px -5px var(--orange);
+}
+
+.four-card-container__four {
+  box-shadow: 0px 18px 22px -3px var(--grayishblue), 0px -5px var(--blue);
+}
+
+.four-card-container__text,
+.head__text {
+  color: var(--grayishblue);
+}
+
+.four-card-container__img {
+  margin-top: 40px;
+  text-align: right;
+}
+
+.footer {
+  margin: 70px 0px 10px 0px;
+}
+
+.footer__attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.footer__attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 768px) {
+  .head {
+    margin: 80px auto;
+    width: 40%;
+  }
+
+  .four-card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    gap: 35px;
+  }
+
+  .four-card-container__card {
+    height: 250px;
+  }
+
+  .four-card-container__one,
+  .four-card-container__four {
+    grid-row: 2;
+    margin-top: -200px;
+    margin-bottom: 200px;
+  }
+
+  .four-card-container__two {
+    grid-column: 2;
+  }
+
+  .four-card-container__three {
+    grid-row: 2;
+  }
+}
